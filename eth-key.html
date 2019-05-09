@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8080/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <title>Eth私钥地址生成器</title>
+  <style type="text/css">
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 40px;
+}
+
+
+/*# sourceURL=/Users/shooter/work/tools/src/src/App.vue */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zaG9vdGVyL3dvcmsvdG9vbHMvc3JjL3NyYy9BcHAudnVlIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFrQkE7RUFDQSxvREFBQTtFQUNBLG9DQUFBO0VBQ0EsbUNBQUE7RUFDQSxtQkFBQTtFQUNBLGVBQUE7RUFDQSxpQkFBQTtDQUNBIiwiZmlsZSI6IkFwcC52dWUiLCJzb3VyY2VzQ29udGVudCI6WyI8dGVtcGxhdGU+XG4gIDxkaXYgaWQ9XCJhcHBcIj5cbiAgICA8RXRoLz5cbiAgPC9kaXY+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuaW1wb3J0IEV0aCBmcm9tICcuL2NvbXBvbmVudHMvRXRoJ1xuXG5leHBvcnQgZGVmYXVsdCB7XG4gIG5hbWU6ICdBcHAnLFxuICBjb21wb25lbnRzOiB7XG4gICAgRXRoXG4gIH1cbn1cbjwvc2NyaXB0PlxuXG48c3R5bGU+XG4jYXBwIHtcbiAgZm9udC1mYW1pbHk6ICdBdmVuaXInLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBjb2xvcjogIzJjM2U1MDtcbiAgbWFyZ2luLXRvcDogNDBweDtcbn1cblxuPC9zdHlsZT5cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style type="text/css">
+h1[data-v-ad8389ce], h2[data-v-ad8389ce] {
+  font-weight: normal;
+}
+h2[data-v-ad8389ce] {
+  margin-bottom: 80px;
+}
+.logo[data-v-ad8389ce] {
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo img[data-v-ad8389ce] {
+  width: 300px;
+  float: left;
+}
+.title[data-v-ad8389ce] {
+  display: inline-block;
+  vertical-align: middle;
+}
+strong[data-v-ad8389ce] {
+  color: red;
+}
+button[data-v-ad8389ce] {
+  color: #fff;
+  background-color: #007bff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid #007bff;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  -webkit-transition: color .15s;
+  transition: color .15s
+}
+p[data-v-ad8389ce] {
+  word-wrap: break-word;
+}
+@media (max-width: 760px) {
+.ribbon[data-v-ad8389ce] {
+    display: none;
+}
+}
+
+/*# sourceURL=/Users/shooter/work/tools/src/components/src/components/Eth.vue */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zaG9vdGVyL3dvcmsvdG9vbHMvc3JjL2NvbXBvbmVudHMvc3JjL2NvbXBvbmVudHMvRXRoLnZ1ZSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBa0RBO0VBQ0Esb0JBQUE7Q0FDQTtBQUVBO0VBQ0Esb0JBQUE7Q0FDQTtBQUVBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtDQUNBO0FBRUE7RUFDQSxhQUFBO0VBQ0EsWUFBQTtDQUNBO0FBRUE7RUFDQSxzQkFBQTtFQUNBLHVCQUFBO0NBQ0E7QUFFQTtFQUNBLFdBQUE7Q0FDQTtBQUVBO0VBQ0EsWUFBQTtFQUNBLDBCQUFBO0VBQ0Esc0JBQUE7RUFDQSxpQkFBQTtFQUNBLG1CQUFBO0VBQ0Esb0JBQUE7RUFDQSx1QkFBQTtFQUNBLDBCQUFBO0VBQ0EsdUJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EsMEJBQUE7RUFDQSx3QkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxzQkFBQTtFQUNBLCtCQUFBO0VBQUEsc0JBQUE7Q0FDQTtBQUVBO0VBQ0Esc0JBQUE7Q0FDQTtBQUVBO0FBQ0E7SUFDQSxjQUFBO0NBQ0E7Q0FDQSIsImZpbGUiOiJFdGgudnVlIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuICA8ZGl2IGNsYXNzPVwibWFpblwiPlxuICAgIDxoMj5cbiAgICAgIDxzcGFuIGNsYXNzPVwidGl0bGVcIj5FdGjnp4HpkqXlnLDlnYDnlJ/miJDlmag8L3NwYW4+XG4gICAgPC9oMj5cbiAgICA8cD7mnKzlt6XlhbfnlKjmnaXpmo/mnLrnlJ/miJDkuIDnu4RFdGjnp4HpkqXlnLDlnYDvvIznlJ/miJDov4fnqIvlj6/mlq3nvZHnprvnur/mk43kvZzvvIw8YSBocmVmPVwiaHR0cHM6Ly9naXRodWIuY29tL3Rva2VuYmFua3RlYW0vZW9zLWtleVwiIHRhcmdldD1cIl9ibGFua1wiPuS7o+eggeW3suW8gOa6kDwvYT7jgII8L3A+XG4gICAgPHA+PHN0cm9uZz7or7fkuIDlrprms6jmhI/orrDlvZXlubbkv53nrqHlpb3mgqjnmoTnp4HpkqXkv6Hmga88L3N0cm9uZz48L3A+XG4gICAgPHA+PHN0cm9uZz7or7fkuIDlrprms6jmhI/orrDlvZXlubbkv53nrqHlpb3mgqjnmoTnp4HpkqXkv6Hmga88L3N0cm9uZz48L3A+XG4gICAgPHA+PHN0cm9uZz7or7fkuIDlrprms6jmhI/orrDlvZXlubbkv53nrqHlpb3mgqjnmoTnp4HpkqXkv6Hmga88L3N0cm9uZz48L3A+XG4gICAgPGJ1dHRvbiBAY2xpY2s9XCJnZW5lcmF0ZVwiPueUn+aIkEV0aOengemSpeWSjOWcsOWdgDwvYnV0dG9uPlxuICAgIDxkaXYgdi1pZj1cInByaXZhdGVLZXlcIj5cbiAgICAgIDxwPuengemSpToge3twcml2YXRlS2V5fX08L3A+XG4gICAgICA8cD7lnLDlnYA6IHt7YWRkcmVzc319PC9wPlxuICAgIDwvZGl2PlxuICA8L2Rpdj5cbjwvdGVtcGxhdGU+XG5cbjxzY3JpcHQ+XG5cbmNvbnN0IHtcbiAgZGVmYXVsdDogTmVydm9zXG59ID0gcmVxdWlyZSgnQGNyeXB0YXBlL2NpdGEtc2RrJyk7XG5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgbmFtZTogJ0V0aFBhZ2UnLFxuICBkYXRhICgpIHtcbiAgICByZXR1cm4ge1xuICAgICAgcHJpdmF0ZUtleTogJycsXG4gICAgICBhZGRyZXNzOiAnJ1xuICAgIH1cbiAgfSxcbiAgbWV0aG9kczoge1xuICAgIGdlbmVyYXRlKCkge1xuICAgICAgY29uc3QgbmVydm9zID0gTmVydm9zKClcblxuICAgICAgbGV0IG9iaiA9IG5lcnZvcy5iYXNlLmFjY291bnRzLmNyZWF0ZSgpO1xuXG4gICAgICB0aGlzLnByaXZhdGVLZXkgPSBvYmoucHJpdmF0ZUtleVxuICAgICAgdGhpcy5hZGRyZXNzID0gb2JqLmFkZHJlc3NcbiAgICAgIC8vIGVjYy5yYW5kb21LZXkoKS50aGVuKHByaXZhdGVLZXkgPT4ge1xuICAgICAgLy8gICB0aGlzLnByaXZhdGVLZXkgPSBwcml2YXRlS2V5O1xuICAgICAgLy8gICB0aGlzLnB1YmxpY0tleSA9IGVjYy5wcml2YXRlVG9QdWJsaWMocHJpdmF0ZUtleSk7XG4gICAgICAvLyB9KVxuICAgIH1cbiAgfVxufVxuPC9zY3JpcHQ+XG5cbjwhLS0gQWRkIFwic2NvcGVkXCIgYXR0cmlidXRlIHRvIGxpbWl0IENTUyB0byB0aGlzIGNvbXBvbmVudCBvbmx5IC0tPlxuPHN0eWxlIHNjb3BlZD5cbmgxLCBoMiB7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG59XG5cbmgyIHtcbiAgbWFyZ2luLWJvdHRvbTogODBweDtcbn1cblxuLmxvZ28ge1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG59XG5cbi5sb2dvIGltZyB7XG4gIHdpZHRoOiAzMDBweDtcbiAgZmxvYXQ6IGxlZnQ7XG59XG5cbi50aXRsZSB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbn1cblxuc3Ryb25nIHtcbiAgY29sb3I6IHJlZDtcbn1cblxuYnV0dG9uIHtcbiAgY29sb3I6ICNmZmY7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDdiZmY7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAtd2Via2l0LXVzZXItc2VsZWN0OiBub25lO1xuICAtbW96LXVzZXItc2VsZWN0OiBub25lO1xuICAtbXMtdXNlci1zZWxlY3Q6IG5vbmU7XG4gIHVzZXItc2VsZWN0OiBub25lO1xuICBib3JkZXI6IDFweCBzb2xpZCAjMDA3YmZmO1xuICBwYWRkaW5nOiAuMzc1cmVtIC43NXJlbTtcbiAgZm9udC1zaXplOiAxcmVtO1xuICBsaW5lLWhlaWdodDogMS41O1xuICBib3JkZXItcmFkaXVzOiAuMjVyZW07XG4gIHRyYW5zaXRpb246IGNvbG9yIC4xNXNcbn1cblxucCB7XG4gIHdvcmQtd3JhcDogYnJlYWstd29yZDtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDc2MHB4KSB7XG4gIC5yaWJib24ge1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gIH1cbn1cbjwvc3R5bGU+XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+  <body>
+    <div id="app"><div data-v-ad8389ce="" class="main"><h2 data-v-ad8389ce=""><span data-v-ad8389ce="" class="title">Eth私钥地址生成器</span></h2> <p data-v-ad8389ce="">本工具用来随机生成一组Eth私钥地址，生成过程可断网离线操作，<a data-v-ad8389ce="" href="https://github.com/tokenbankteam/eos-key" target="_blank">代码已开源</a>。</p> <p data-v-ad8389ce=""><strong data-v-ad8389ce="">请一定注意记录并保管好您的私钥信息</strong></p> <p data-v-ad8389ce=""><strong data-v-ad8389ce="">请一定注意记录并保管好您的私钥信息</strong></p> <p data-v-ad8389ce=""><strong data-v-ad8389ce="">请一定注意记录并保管好您的私钥信息</strong></p> <button data-v-ad8389ce="">生成Eth私钥和地址</button> <!----></div></div>
+  <script type="text/javascript" src="./app.js"></script>
+
+</body></html>
